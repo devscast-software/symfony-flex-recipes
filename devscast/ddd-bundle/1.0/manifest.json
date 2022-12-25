@@ -29,9 +29,8 @@
         "webpack.config.js": "webpack.config.js",
         "Makefile.dist": "Makefile.dist",
         "docker-compose.yaml": "docker-compose.yaml",
-        ".env.local": ".env.local",
-        ".env.test": ".env.test",
-        ".gitattributes": ".gitattributes"
+        "_env.test": ".env.test",
+        "_gitattributes": ".gitattributes"
     },
     "gitignore": [
         "/.idea/",
