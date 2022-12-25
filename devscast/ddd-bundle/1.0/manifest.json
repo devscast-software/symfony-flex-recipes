@@ -30,7 +30,8 @@
         "Makefile": "Makefile",
         "docker-compose.yaml": "docker-compose.yaml",
         ".env.local": ".env.local",
-        ".env.test": ".env.test"
+        ".env.test": ".env.test",
+        ".gitattributes": ".gitattributes"
     },
     "gitignore": [
         "/.idea/",
