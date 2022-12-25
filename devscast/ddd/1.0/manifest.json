@@ -1,0 +1,36 @@
+{
+    "copy-from-recipe": {
+        ".github/": ".github/",
+        "assets/": "assets/",
+        "config/": "config/",
+        "fixtures/": "fixtures/",
+        "src/": "src/",
+        "templates/": "templates/",
+        "tests/": "tests/",
+        "tools/": "tools/",
+        "translations/": "translations/",
+        
+        "_README.md": "README.md",
+        "LICENSE.md": "LICENSE.md",
+        "CONTRIBUTING.md": "CONTRIBUTING.md",
+        "ecs.php": "ecs.php",
+        "phpcs.xml.dist": "phpcs.xml.dist",
+        "phpstan.neon": "phpstan.neon",
+        "phpunit.xml.dist": "phpunit.xml.dist",
+        "postcss.config.js": "postcss.config.js",
+        "psalm.xml": "psalm.xml",
+        "rector.php": "rector.php",
+        "tailwind.config.js": "tailwind.config.js",
+        "webpack.config.js": "webpack.config.js",
+        "Makerfile": "Makerfile",
+        "docker-compose.yaml": "docker-compose.yaml",
+        ".env.local": ".env.local",
+        ".env.test": ".env.test"
+    },
+    "gitignore": [
+        "/.idea/",
+        "/.vscode/",
+        "/public/uploads/",
+        "/uploads"
+    ]
+}

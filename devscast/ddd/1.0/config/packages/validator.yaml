@@ -1,0 +1,14 @@
+framework:
+    validation:
+        email_validation_mode: html5
+        #auto_mapping:
+        #    App\Entity\: []
+
+        mapping:
+            paths:
+                - "%kernel.project_dir%/src/Infrastructure/Authentication/Validation/Mapping"
+                - "%kernel.project_dir%/src/Infrastructure/Content/Validation/Mapping"
+when@test:
+    framework:
+        validation:
+            not_compromised_password: false

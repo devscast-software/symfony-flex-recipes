@@ -1,0 +1,14 @@
+{
+    "recipes": {
+        "devscast/symfony-ddd-skeleton": [
+            "1.0"
+        ]
+    },
+    "branch": "main",
+    "is_contrib": true,
+    "_links": {
+        "repository": "github.com/devscast/symfony-ddd-skeleton",
+        "origin_template": "{package}:{version}@github.com/devscast/symfony-ddd-skeleton:main",
+        "recipe_template": "https://api.github.com/repos/devscast/symfony-ddd-skeleton/{package_dotted}.{version}.json"
+    }
+}
