@@ -27,7 +27,7 @@
         "rector.php": "rector.php",
         "tailwind.config.js": "tailwind.config.js",
         "webpack.config.js": "webpack.config.js",
-        "Makefile": "Makefile",
+        "Makefile.dist": "Makefile.dist",
         "docker-compose.yaml": "docker-compose.yaml",
         ".env.local": ".env.local",
         ".env.test": ".env.test",
