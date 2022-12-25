@@ -6,6 +6,7 @@
     },
     "copy-from-recipe": {
         ".github/": ".github/",
+        "bin/": "bin/",
         "assets/": "assets/",
         "config/": "config/",
         "fixtures/": "fixtures/",
@@ -27,7 +28,7 @@
         "rector.php": "rector.php",
         "tailwind.config.js": "tailwind.config.js",
         "webpack.config.js": "webpack.config.js",
-        "Makefile.dist": "Makefile.dist",
+        "_Makefile": "Makefile",
         "docker-compose.yaml": "docker-compose.yaml",
         "_env.test": ".env.test",
         "_gitattributes": ".gitattributes"
