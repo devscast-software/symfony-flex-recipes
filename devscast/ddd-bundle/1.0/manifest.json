@@ -1,4 +1,9 @@
 {
+    "bundles": {
+        "Devscast\\DddBundle\\DevscastDddBundle": [
+            "all"
+        ]
+    },
     "copy-from-recipe": {
         ".github/": ".github/",
         "assets/": "assets/",
@@ -22,7 +27,7 @@
         "rector.php": "rector.php",
         "tailwind.config.js": "tailwind.config.js",
         "webpack.config.js": "webpack.config.js",
-        "Makerfile": "Makerfile",
+        "Makefile": "Makefile",
         "docker-compose.yaml": "docker-compose.yaml",
         ".env.local": ".env.local",
         ".env.test": ".env.test"
