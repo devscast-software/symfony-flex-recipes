@@ -4,4 +4,4 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 
 | Package | Latest Recipe |
 | --- | --- |
-| [devscast/ddd](https://packagist.org/packages/devscast/ddd) | [1.0](devscast/ddd/1.0) |
+| [devscast/ddd-bundle](https://packagist.org/packages/devscast/ddd-bundle) | [1.0](devscast/ddd-bundle/1.0) |

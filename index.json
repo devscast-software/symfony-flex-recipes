@@ -1,7 +1,7 @@
 {
     "aliases": [],
     "recipes": {
-        "devscast/ddd": [
+        "devscast/ddd-bundle": [
             "1.0"
         ]
     },
