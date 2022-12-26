@@ -15,6 +15,7 @@
         "tests/": "tests/",
         "tools/": "tools/",
         "translations/": "translations/",
+        "public/": "public/",
         
         "_README.md": "README.md",
         "LICENSE.md": "LICENSE.md",
