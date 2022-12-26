@@ -4,6 +4,6 @@
         "Doctrine\\Bundle\\FixturesBundle\\DoctrineFixturesBundle": ["dev", "test"]
     },
     "copy-from-recipe": {
-        "fixture/": "fixture/"
+        "fixtures/": "fixtures/"
     }
 }
