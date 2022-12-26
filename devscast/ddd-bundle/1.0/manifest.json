@@ -6,7 +6,7 @@
     },
     "copy-from-recipe": {
         ".github/": ".github/",
-        "bin/": "bin/",
+        "bin/console": "bin/console",
         "assets/": "assets/",
         "config/": "config/",
         "fixtures/": "fixtures/",
