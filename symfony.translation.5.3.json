@@ -1,0 +1,52 @@
+{
+    "manifests": {
+        "symfony/translation": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "translations/": "translations/"
+                }
+            },
+            "files": {
+                "config/packages/translation.yaml": {
+                    "contents": [
+                        "framework:",
+                        "    default_locale: en",
+                        "    translator:",
+                        "        default_path: '%kernel.project_dir%/translations'",
+                        "        fallbacks:",
+                        "            - en",
+                        "#        providers:",
+                        "#            crowdin:",
+                        "#                dsn: '%env(CROWDIN_DSN)%'",
+                        "#            loco:",
+                        "#                dsn: '%env(LOCO_DSN)%'",
+                        "#            lokalise:",
+                        "#                dsn: '%env(LOKALISE_DSN)%'"
+                    ],
+                    "executable": false
+                },
+                "translations/messages.fr.yaml": {
+                    "contents": [
+                        "global.submit: Soumettre",
+                        "global.resend: Renvoyer",
+                        "global.new: Ajouter",
+                        "global.cancel: Annuler",
+                        "global.close: Fermer",
+                        "global.show: D\u00e9tail",
+                        "global.back: Retour",
+                        "global.edit: Modifier",
+                        "global.delete: Supprimer",
+                        "",
+                        "# flash messages",
+                        "global.flashes.something_went_wrong: D\u00e9sol\u00e9 une erreur est survenue de notre c\u00f4t\u00e9, veuillez r\u00e9essayer",
+                        "global.flashes.action_done_successfully: '%action% effectu\u00e9(e) avec succ\u00e8s !'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "ef07a4761417140b74b402b79a3c3078e99ba10b"
+        }
+    }
+}
