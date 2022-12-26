@@ -11,7 +11,7 @@ doctrine:
             Domain\Shared\Entity:
                 type: xml
                 dir: '%kernel.project_dir%/src/Infrastructure/Shared/Doctrine/Mapping/Entity'
-                prefix: 'Domain\Authentication\Entity'
+                prefix: 'Domain\Shared\Entity'
                 is_bundle: false
             Domain\Shared\ValueObject:
                 type: xml
