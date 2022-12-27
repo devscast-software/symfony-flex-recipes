@@ -10,7 +10,10 @@
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/",
                     "migrations/": "migrations/"
-                }
+                },
+                "post-install-output": [
+                    "  * installed from devscast"
+                ]
             },
             "files": {
                 "config/doctrine_migrations.yaml": {
@@ -41,7 +44,7 @@
                     "executable": false
                 }
             },
-            "ref": "3e5057199aa6630ae943c102dd0e90b864cc6419"
+            "ref": "fe90f1d2753d2882529d272a7f78123eaf8e6688"
         }
     }
 }

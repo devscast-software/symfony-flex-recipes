@@ -5,7 +5,10 @@
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/",
                     "translations/": "translations/"
-                }
+                },
+                "post-install-output": [
+                    "  * installed from devscast"
+                ]
             },
             "files": {
                 "config/packages/translation.yaml": {
@@ -46,7 +49,7 @@
                     "executable": false
                 }
             },
-            "ref": "ef07a4761417140b74b402b79a3c3078e99ba10b"
+            "ref": "2a919526e2597903cf9cedfe9ce50ad687d82426"
         }
     }
 }

@@ -4,7 +4,10 @@
             "manifest": {
                 "copy-from-recipe": {
                     "bin/": "%BIN_DIR%/"
-                }
+                },
+                "post-install-output": [
+                    "  * installed from devscast"
+                ]
             },
             "files": {
                 "bin/console": {
@@ -31,7 +34,7 @@
                     "executable": false
                 }
             },
-            "ref": "1f73700e1718af46cd3558cb706ad8967762f2e7"
+            "ref": "acac844405ceaa75408834c4695ad12a4cfccada"
         }
     }
 }

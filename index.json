@@ -11,8 +11,12 @@
         "migrations": "doctrine/doctrine-migrations-bundle",
         "orm-fixtures": "doctrine/doctrine-fixtures-bundle",
         "ormfixtures": "doctrine/doctrine-fixtures-bundle",
+        "phpunit-bridge": "symfony/phpunit-bridge",
+        "phpunitbridge": "symfony/phpunit-bridge",
         "router": "symfony/routing",
         "routing": "symfony/routing",
+        "simple-phpunit": "symfony/phpunit-bridge",
+        "simplephpunit": "symfony/phpunit-bridge",
         "translation": "symfony/translation",
         "translations": "symfony/translation",
         "translator": "symfony/translation",
@@ -51,6 +55,9 @@
         ],
         "symfony/framework-bundle": [
             "6.2"
+        ],
+        "symfony/phpunit-bridge": [
+            "5.3"
         ],
         "symfony/routing": [
             "6.2"

@@ -8,7 +8,10 @@
                 },
                 "conflict": {
                     "symfony/framework-bundle": "<5.3"
-                }
+                },
+                "post-install-output": [
+                    "  * installed from devscast"
+                ]
             },
             "files": {
                 "config/packages/validator.yaml": {
@@ -37,7 +40,7 @@
                     "executable": false
                 }
             },
-            "ref": "432c209715f83f6c868210dd8722235d3450da80"
+            "ref": "f04205f67a65658ec9f1c9dc527966aa6a35b2d1"
         }
     }
 }

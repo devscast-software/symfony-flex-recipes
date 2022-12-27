@@ -12,6 +12,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [scheb/2fa-bundle](https://packagist.org/packages/scheb/2fa-bundle) | [6.0](scheb/2fa-bundle/6.0) | `2fa` |
 | [symfony/console](https://packagist.org/packages/symfony/console) | [5.3](symfony/console/5.3) | `cli`, `console` |
 | [symfony/framework-bundle](https://packagist.org/packages/symfony/framework-bundle) | [6.2](symfony/framework-bundle/6.2) | `framework-bundle`, `frameworkbundle` |
+| [symfony/phpunit-bridge](https://packagist.org/packages/symfony/phpunit-bridge) | [5.3](symfony/phpunit-bridge/5.3) | `phpunit-bridge`, `phpunitbridge`, `simple-phpunit`, `simplephpunit` |
 | [symfony/routing](https://packagist.org/packages/symfony/routing) | [6.2](symfony/routing/6.2) | `router`, `routing` |
 | [symfony/translation](https://packagist.org/packages/symfony/translation) | [5.3](symfony/translation/5.3) | `translation`, `translations`, `translator` |
 | [symfony/twig-bundle](https://packagist.org/packages/symfony/twig-bundle) | [5.4](symfony/twig-bundle/5.4) | `twig-bundle`, `twigbundle` |

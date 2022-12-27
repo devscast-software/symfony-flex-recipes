@@ -7,7 +7,10 @@
                 },
                 "conflict": {
                     "symfony/framework-bundle": "<6.2"
-                }
+                },
+                "post-install-output": [
+                    "  * installed from devscast"
+                ]
             },
             "files": {
                 "config/packages/routing.yaml": {
@@ -47,7 +50,7 @@
                     "executable": false
                 }
             },
-            "ref": "155f4cdc5033a94a19bce99e742c35373ccaf28e"
+            "ref": "08903f812975f22439f50f06f727dea27fa542a2"
         }
     }
 }

@@ -30,12 +30,7 @@
                     "/vendor/"
                 ],
                 "post-install-output": [
-                    "  * <fg=blue>Run</> your application:",
-                    "    1. Go to the project directory",
-                    "    2. Create your code repository with the <comment>git init</comment> command",
-                    "    3. Download the Symfony CLI at <comment>https://symfony.com/download</> to install a development web server",
-                    "",
-                    "  * <fg=blue>Read</> the documentation at <comment>https://symfony.com/doc</>"
+                    "  * installed from devscast"
                 ]
             },
             "files": {
@@ -210,7 +205,7 @@
                     "executable": false
                 }
             },
-            "ref": "82f029ee6f23c1863e6978a1e8e074d042bc79c9"
+            "ref": "bfddd2a5443a7a99084b5191cb461dd8d09b915d"
         }
     }
 }

@@ -10,7 +10,10 @@
                 },
                 "copy-from-recipe": {
                     "fixtures/": "fixtures/"
-                }
+                },
+                "post-install-output": [
+                    "  * installed from devscast"
+                ]
             },
             "files": {
                 "fixtures/AppFixtures.php": {
@@ -72,7 +75,7 @@
                     "executable": false
                 }
             },
-            "ref": "3159fc72ee949cb2e03dba646e30349f4044b1fd"
+            "ref": "23fd6c7776d2f25757706cb5a661bed6f22baf1f"
         }
     }
 }

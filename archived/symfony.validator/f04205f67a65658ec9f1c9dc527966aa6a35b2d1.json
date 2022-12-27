@@ -1,0 +1,46 @@
+{
+    "manifests": {
+        "symfony/validator": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "src/"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<5.3"
+                },
+                "post-install-output": [
+                    "  * installed from devscast"
+                ]
+            },
+            "files": {
+                "config/packages/validator.yaml": {
+                    "contents": [
+                        "framework:",
+                        "    validation:",
+                        "        email_validation_mode: html5",
+                        "        #auto_mapping:",
+                        "        #    App\\Entity\\: []",
+                        "",
+                        "        mapping:",
+                        "            paths:",
+                        "                - \"%kernel.project_dir%/src/Infrastructure/Shared/Validation/Mapping\"",
+                        "when@test:",
+                        "    framework:",
+                        "        validation:",
+                        "            not_compromised_password: false",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Infrastructure/Shared/Validation/Mapping/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "f04205f67a65658ec9f1c9dc527966aa6a35b2d1"
+        }
+    }
+}
