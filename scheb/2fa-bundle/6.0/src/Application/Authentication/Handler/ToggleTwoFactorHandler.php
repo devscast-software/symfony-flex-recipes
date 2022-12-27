@@ -19,27 +19,27 @@ use Symfony\Component\Messenger\Attribute\AsMessageHandler;
 #[AsMessageHandler]
 final class ToggleTwoFactorHandler
 {
-    public function __construct(
-        private readonly UserRepositoryInterface $repository,
-        private readonly EventDispatcherInterface $dispatcher
-    ) {
-    }
+    // public function __construct(
+    //     private readonly UserRepositoryInterface $repository,
+    //     private readonly EventDispatcherInterface $dispatcher
+    // ) {
+    // }
 
-    public function __invoke(ToggleTwoFactorCommand $command): void
-    {
-        $user = $command->user;
-        $status = $user->isTwoFactorEnabled();
+    // public function __invoke(ToggleTwoFactorCommand $command): void
+    // {
+    //     $user = $command->user;
+    //     $status = $user->isTwoFactorEnabled();
 
-        $command->email ? $user->enableEmailAuthCode() : $user->disableEmailAuthCode();
-        $command->google ? $user->enableGoogleAuthenticator() : $user->disableGoogleAuthenticator();
-        $this->repository->save($user);
+    //     $command->email ? $user->enableEmailAuthCode() : $user->disableEmailAuthCode();
+    //     $command->google ? $user->enableGoogleAuthenticator() : $user->disableGoogleAuthenticator();
+    //     $this->repository->save($user);
 
-        if (false === $user->isTwoFactorEnabled() && $user->isTwoFactorEnabled() !== $status) {
-            $this->dispatcher->dispatch(new TwoFactorDisabledEvent($user));
-        }
+    //     if (false === $user->isTwoFactorEnabled() && $user->isTwoFactorEnabled() !== $status) {
+    //         $this->dispatcher->dispatch(new TwoFactorDisabledEvent($user));
+    //     }
 
-        if (true === $user->isTwoFactorEnabled() && $user->isTwoFactorEnabled() !== $status) {
-            $this->dispatcher->dispatch(new TwoFactorEnabledEvent($user));
-        }
-    }
+    //     if (true === $user->isTwoFactorEnabled() && $user->isTwoFactorEnabled() !== $status) {
+    //         $this->dispatcher->dispatch(new TwoFactorEnabledEvent($user));
+    //     }
+    // }
 }
