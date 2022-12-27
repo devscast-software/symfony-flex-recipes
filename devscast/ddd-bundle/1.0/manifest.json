@@ -5,25 +5,22 @@
         ]
     },
     "copy-from-recipe": {
-        ".github/": ".github/",
         "config/": "config/",
         "src/": "src/",
-        "tests/": "tests/",
         "tools/": "tools/",
         "public/": "public/",
         
+        "_github/": ".github/",
         "_README.md": "README.md",
         "LICENSE.md": "LICENSE.md",
         "CONTRIBUTING.md": "CONTRIBUTING.md",
         "ecs.php": "ecs.php",
         "phpcs.xml.dist": "phpcs.xml.dist",
         "phpstan.neon": "phpstan.neon",
-        "phpunit.xml.dist": "phpunit.xml.dist",
         "psalm.xml": "psalm.xml",
         "rector.php": "rector.php",
         "_Makefile": "Makefile",
         "docker-compose.yaml": "docker-compose.yaml",
-        "_env.test": ".env.test",
         "_gitattributes": ".gitattributes",
         "_editorconfig": ".editorconfig"
     },
@@ -32,5 +29,8 @@
         "/.vscode/",
         "/public/uploads/",
         "/uploads"
-    ]
+    ],
+    "env": {
+        "GLIDE_KEY": "%generate(secret)%"
+    }
 }
