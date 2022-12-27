@@ -131,8 +131,8 @@
                         "    _defaults:",
                         "        autowire: true      # Automatically injects dependencies in your services.",
                         "        autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.",
-                        "        bind:",
-                        "            $projectDir: '%kernel.project_dir%'",
+                        "        # bind:",
+                        "        #     $projectDir: '%kernel.project_dir%'",
                         "",
                         "    # makes classes in src/ available to be used as services",
                         "    # this creates a service per class whose id is the fully-qualified class name",
@@ -210,7 +210,7 @@
                     "executable": false
                 }
             },
-            "ref": "ed5a2be01bd5c383731a1d12ff9734c3ac441dfb"
+            "ref": "82f029ee6f23c1863e6978a1e8e074d042bc79c9"
         }
     }
 }
