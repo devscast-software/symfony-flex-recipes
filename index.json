@@ -40,6 +40,9 @@
         "doctrine/doctrine-migrations-bundle": [
             "3.1"
         ],
+        "phpunit/phpunit": [
+            "9.3"
+        ],
         "scheb/2fa-bundle": [
             "6.0"
         ],
