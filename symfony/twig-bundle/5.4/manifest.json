@@ -4,7 +4,8 @@
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/",
-        "templates/": "templates/"
+        "templates/": "templates/",
+        "src/": "src/"
     },
     "conflict": {
         "symfony/framework-bundle": "<5.3"
