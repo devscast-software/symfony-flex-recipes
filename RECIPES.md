@@ -8,6 +8,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [doctrine/doctrine-bundle](https://packagist.org/packages/doctrine/doctrine-bundle) | [2.4](doctrine/doctrine-bundle/2.4) |  |
 | [doctrine/doctrine-fixtures-bundle](https://packagist.org/packages/doctrine/doctrine-fixtures-bundle) | [3.0](doctrine/doctrine-fixtures-bundle/3.0) | `orm-fixtures`, `ormfixtures` |
 | [doctrine/doctrine-migrations-bundle](https://packagist.org/packages/doctrine/doctrine-migrations-bundle) | [3.1](doctrine/doctrine-migrations-bundle/3.1) | `doctrine-migrations`, `doctrinemigrations`, `migrations` |
+| [scheb/2fa-bundle](https://packagist.org/packages/scheb/2fa-bundle) | [6.0](scheb/2fa-bundle/6.0) | `2fa` |
 | [symfony/console](https://packagist.org/packages/symfony/console) | [5.3](symfony/console/5.3) | `cli`, `console` |
 | [symfony/framework-bundle](https://packagist.org/packages/symfony/framework-bundle) | [6.2](symfony/framework-bundle/6.2) | `framework-bundle`, `frameworkbundle` |
 | [symfony/routing](https://packagist.org/packages/symfony/routing) | [6.2](symfony/routing/6.2) | `router`, `routing` |

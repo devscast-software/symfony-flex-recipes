@@ -1,5 +1,6 @@
 {
     "aliases": {
+        "2fa": "scheb/2fa-bundle",
         "cli": "symfony/console",
         "console": "symfony/console",
         "doctrine-migrations": "doctrine/doctrine-migrations-bundle",
@@ -38,6 +39,9 @@
         ],
         "doctrine/doctrine-migrations-bundle": [
             "3.1"
+        ],
+        "scheb/2fa-bundle": [
+            "6.0"
         ],
         "symfony/console": [
             "5.3"
