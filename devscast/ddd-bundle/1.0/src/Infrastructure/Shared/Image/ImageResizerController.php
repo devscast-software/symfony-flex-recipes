@@ -25,7 +25,7 @@ class ImageResizerController
     private readonly string $resize_key;
     private readonly string $public_path;
 
-    public function __construct(string $projectDir)
+    public function __construct(string $projectDir = '')
     {
         $this->cache_path = sprintf('%s/var/images', $projectDir);
         $this->public_path = sprintf('%s/public', $projectDir);
