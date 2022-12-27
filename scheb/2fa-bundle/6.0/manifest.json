@@ -3,7 +3,8 @@
         "Scheb\\TwoFactorBundle\\SchebTwoFactorBundle": ["all"]
     },
     "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/"
+        "config/": "%CONFIG_DIR%/",
+        "src/": "src/"
     },
     "aliases": ["2fa"]
 }
