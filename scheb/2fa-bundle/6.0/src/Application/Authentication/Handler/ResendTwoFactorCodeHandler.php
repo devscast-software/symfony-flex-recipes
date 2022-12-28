@@ -18,19 +18,19 @@ use Symfony\Component\RateLimiter\RateLimiterFactory;
 #[AsMessageHandler]
 final class ResendTwoFactorCodeHandler
 {
-    public function __construct(
-        private readonly CodeGeneratorInterface $codeGenerator,
-        private readonly RateLimiterFactory $resendTwoFactorCodeLimiter
-    ) {
-    }
+    // public function __construct(
+    //     private readonly CodeGeneratorInterface $codeGenerator,
+    //     private readonly RateLimiterFactory $resendTwoFactorCodeLimiter
+    // ) {
+    // }
 
-    /**
-     * @throws RateLimitExceededException
-     */
-    public function __invoke(ResendTwoFactorCodeCommand $command): void
-    {
-        $limiter = $this->resendTwoFactorCodeLimiter->create($command->ip);
-        $limiter->consume()->ensureAccepted();
-        $this->codeGenerator->generateAndSend($command->user);
-    }
+    // /**
+    //  * @throws RateLimitExceededException
+    //  */
+    // public function __invoke(ResendTwoFactorCodeCommand $command): void
+    // {
+    //     $limiter = $this->resendTwoFactorCodeLimiter->create($command->ip);
+    //     $limiter->consume()->ensureAccepted();
+    //     $this->codeGenerator->generateAndSend($command->user);
+    // }
 }
