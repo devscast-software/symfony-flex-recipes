@@ -24,13 +24,13 @@ final class ResendTwoFactorCodeHandler
     // ) {
     // }
 
-    // /**
-    //  * @throws RateLimitExceededException
-    //  */
-    // public function __invoke(ResendTwoFactorCodeCommand $command): void
-    // {
-    //     $limiter = $this->resendTwoFactorCodeLimiter->create($command->ip);
-    //     $limiter->consume()->ensureAccepted();
-    //     $this->codeGenerator->generateAndSend($command->user);
-    // }
+    /**
+     * @throws RateLimitExceededException
+     */
+    public function __invoke(ResendTwoFactorCodeCommand $command): void
+    {
+        // $limiter = $this->resendTwoFactorCodeLimiter->create($command->ip);
+        // $limiter->consume()->ensureAccepted();
+        // $this->codeGenerator->generateAndSend($command->user);
+    }
 }

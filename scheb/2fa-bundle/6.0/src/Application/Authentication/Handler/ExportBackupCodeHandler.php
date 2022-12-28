@@ -22,13 +22,13 @@ final class ExportBackupCodeHandler
     // ) {
     // }
 
-    // public function __invoke(ExportBackupCodeCommand $command): string
-    // {
-    //     $user = $command->user;
-    //     if (0 === count($user->getBackupCodes())) {
-    //         $this->commandBus->dispatch(new GenerateBackupCodeCommand($user));
-    //     }
+    public function __invoke(ExportBackupCodeCommand $command): string
+    {
+        // $user = $command->user;
+        // if (0 === count($user->getBackupCodes())) {
+        //     $this->commandBus->dispatch(new GenerateBackupCodeCommand($user));
+        // }
 
-    //     return implode("\n", $user->getBackupCodes());
-    // }
+        // return implode("\n", $user->getBackupCodes());
+    }
 }

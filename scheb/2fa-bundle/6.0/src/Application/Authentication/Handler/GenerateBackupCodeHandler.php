@@ -21,17 +21,17 @@ final class GenerateBackupCodeHandler
     // ) {
     // }
 
-    // public function __invoke(GenerateBackupCodeCommand $command): void
-    // {
-    //     $user = $command->user;
-    //     $codes = [];
-    //     for ($i = 0; $i <= 5; ++$i) {
-    //         $codes[$i] = $this->generateCode();
-    //     }
+    public function __invoke(GenerateBackupCodeCommand $command): void
+    {
+        // $user = $command->user;
+        // $codes = [];
+        // for ($i = 0; $i <= 5; ++$i) {
+        //     $codes[$i] = $this->generateCode();
+        // }
 
-    //     $user->setBackupCodes($codes);
-    //     $this->repository->save($user);
-    // }
+        // $user->setBackupCodes($codes);
+        // $this->repository->save($user);
+    }
 
     // private function generateCode(): int
     // {
