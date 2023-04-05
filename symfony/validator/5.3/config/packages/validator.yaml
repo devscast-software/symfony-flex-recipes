@@ -4,9 +4,6 @@ framework:
         #auto_mapping:
         #    App\Entity\: []
 
-        mapping:
-            paths:
-                - "%kernel.project_dir%/src/Infrastructure/Shared/Validation/Mapping"
 when@test:
     framework:
         validation:

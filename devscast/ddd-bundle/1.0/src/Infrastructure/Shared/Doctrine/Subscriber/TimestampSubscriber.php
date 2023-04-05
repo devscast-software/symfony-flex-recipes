@@ -26,16 +26,20 @@ final class TimestampSubscriber implements EventSubscriberInterface
     public function prePersist(LifecycleEventArgs $args): void
     {
         $object = $args->getObject();
-        if (method_exists($object, 'setCreatedAt')) {
-            $object->setCreatedAt(new \DateTimeImmutable());
+        if (method_exists($object, 'setCreatedAt') && method_exists($object, 'getCreatedAt')) {
+            if (null === $object->getCreatedAt()) {
+                $object->setCreatedAt(new \DateTimeImmutable());
+            }
         }
     }
 
     public function postUpdate(LifecycleEventArgs $args): void
     {
         $object = $args->getObject();
-        if (method_exists($object, 'setUpdatedAt')) {
-            $object->setUpdatedAt(new \DateTimeImmutable());
+        if (method_exists($object, 'setUpdatedAt') && method_exists($object, 'getUpdatedAt')) {
+            if (null === $object->getUpdatedAt()) {
+                $object->setUpdatedAt(new \DateTimeImmutable());
+            }
         }
     }
 }

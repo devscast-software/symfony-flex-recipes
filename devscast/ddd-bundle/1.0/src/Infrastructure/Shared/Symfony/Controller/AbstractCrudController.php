@@ -11,6 +11,7 @@ use Knp\Component\Pager\PaginatorInterface;
 use Psr\Log\LoggerInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\HttpFoundation\Response;
@@ -68,9 +69,7 @@ abstract class AbstractCrudController extends AbstractController
             view: $this->getViewPath('index'),
             parameters: [
                 'data' => $this->paginator->paginate(
-                    target: $repository->findBy([], orderBy: [
-                        'created_at' => 'DESC',
-                    ]),
+                    target: $repository->findBy([]),
                     page: $this->request->query->getInt('page', 1),
                     limit: 50
                 ),
@@ -104,7 +103,9 @@ abstract class AbstractCrudController extends AbstractController
         string $formClass,
         ?HasIdentityInterface $row = null,
         string $view = 'new',
-        bool $overrideFormViews = false
+        bool $overrideFormViews = false,
+        ?string $redirectToPath = null,
+        bool $hasIndex = true,
     ): Response {
         $turbo = $this->request->headers->get('Turbo-Frame');
         $form = $this->createForm($formClass, $command, [
@@ -128,7 +129,10 @@ abstract class AbstractCrudController extends AbstractController
                     );
                 }
 
-                return $this->redirectSeeOther($this->getRouteName('index'));
+                return match (true) {
+                    null !== $redirectToPath => new RedirectResponse($redirectToPath, Response::HTTP_SEE_OTHER),
+                    default => $this->redirectSeeOther($this->getRouteName('index'))
+                };
             } catch (\Throwable $e) {
                 if ($turbo) {
                     $form->addError($this->addSafeMessageExceptionError($e));
@@ -139,7 +143,7 @@ abstract class AbstractCrudController extends AbstractController
             }
         }
 
-        return $this->renderForm(
+        return $this->render(
             view: $this->getViewPath($view, $overrideFormViews),
             parameters: [
                 'form' => $form,
@@ -147,7 +151,7 @@ abstract class AbstractCrudController extends AbstractController
                 '_domain' => static::DOMAIN,
                 '_entity' => static::ENTITY,
                 '_turbo_frame_target' => $turbo,
-                '_index_url' => $this->generateUrl($this->getRouteName('index')),
+                '_index_url' => false !== $hasIndex ? $this->generateUrl($this->getRouteName('index')) : null,
                 '_show_url' => null !== $row ? $this->generateUrl($this->getRouteName('show'), [
                     'id' => $row->getId(),
                 ]) : null,
@@ -156,7 +160,7 @@ abstract class AbstractCrudController extends AbstractController
         );
     }
 
-    public function executeDeleteCommand(object $command, object $row): Response
+    public function executeDeleteCommand(object $command, object $row, ?string $redirectToPath = null): Response
     {
         if ($this->isDeleteCsrfTokenValid($row, $this->request)) {
             try {
@@ -178,6 +182,9 @@ abstract class AbstractCrudController extends AbstractController
             }
         }
 
-        return $this->redirectSeeOther($this->getRouteName('index'));
+        return match (true) {
+            null !== $redirectToPath => new RedirectResponse($redirectToPath, Response::HTTP_SEE_OTHER),
+            default => $this->redirectSeeOther($this->getRouteName('index'))
+        };
     }
 }

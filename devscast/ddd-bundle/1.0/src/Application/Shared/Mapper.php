@@ -23,6 +23,36 @@ final class Mapper
         }
     }
 
+    public static function toArray(object $source, array $ignore = []): array
+    {
+        $propertyAccessor = PropertyAccess::createPropertyAccessorBuilder()
+            ->getPropertyAccessor();
+        $sourceReflection = new \ReflectionClass($source);
+
+        $data = [];
+        foreach ($sourceReflection->getProperties() as $property) {
+            $propertyName = $property->getName();
+            if (! in_array($propertyName, $ignore, true)) {
+                $data[$propertyName] = $property->getValue($source);
+            }
+        }
+
+        return $data;
+    }
+
+    public static function fromArray(array $source, object $destination, array $ignore = []): void
+    {
+        $propertyAccessor = PropertyAccess::createPropertyAccessorBuilder()
+            ->getPropertyAccessor();
+        $destinationReflection = new \ReflectionClass($destination);
+
+        foreach ($source as $property => $value) {
+            if ($destinationReflection->hasProperty($property) && ! in_array($property, $ignore, true)) {
+                $propertyAccessor->setValue($destination, $property, $value);
+            }
+        }
+    }
+
     public static function getHydratedObject(object $source, object $destination, array $ignore = []): object
     {
         self::hydrate($source, $destination, $ignore);
