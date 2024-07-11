@@ -1,0 +1,5 @@
+{% if is_granted('ROLE_ADMIN') %}
+    {% set data = [] %}
+{% endif %}
+
+<twig:Dashlite:Sidebar:Sidebar :data="data" />

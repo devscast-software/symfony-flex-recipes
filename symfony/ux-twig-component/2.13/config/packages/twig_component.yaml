@@ -1,0 +1,8 @@
+twig_component:
+    anonymous_template_directory: 'app/shared/component/'
+    defaults:
+        Devscast\Bundle\DashliteBundle\Component\:
+            template_directory: '@DevscastDashlite/component/'
+            name_prefix: 'Dashlite'
+
+        Infrastructure\Shared\Twig\Component\: 'admin/shared/component/'

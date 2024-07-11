@@ -1,0 +1,10 @@
+@import 'dashlite.min.css';
+@import './skins/theme-green.css';
+
+.editor-toolbar.fullscreen {
+  z-index: 100000 !important;
+}
+
+.editor-preview-side {
+  z-index: 100000 !important;
+}

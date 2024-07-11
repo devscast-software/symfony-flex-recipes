@@ -1,0 +1,22 @@
+{% extends '@DevscastDashlite/layout/base.html.twig' %}
+{% set _title = (data is defined and data) ? "Édition #{ _entity | trans([], _domain) }" : "Création #{_entity | trans([], _domain)}" %}
+<twig:block name="title">{{ _title }}</twig:block>
+<twig:block name="sidebar">
+    {% include 'admin/shared/layout/_sidebar.html.twig' %}
+</twig:block>
+
+<twig:block name="header">
+    <twig:Dashlite:Layout:Header :title="_title" backTitle="Toutes les entrées" backPath="{{ _index_url }}">
+        <twig:block name="content">
+            {% if _show_url %}
+                <twig:Dashlite:Button:HeaderLink name="détails" icon="eye" path="{{ _show_url }}" />
+            {% endif %}
+        </twig:block>
+    </twig:Dashlite:Layout:Header>
+</twig:block>
+
+<twig:block name="content">
+    <twig:Dashlite:Card:Card>
+        <twig:Dashlite:Form :form="form" />
+    </twig:Dashlite:Card:Card>
+</twig:block>
