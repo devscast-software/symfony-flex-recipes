@@ -1,0 +1,54 @@
+{
+    "manifests": {
+        "doctrine/doctrine-migrations-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Doctrine\\Bundle\\MigrationsBundle\\DoctrineMigrationsBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "migrations/": "migrations/"
+                },
+                "post-install-output": [
+                    "  * installed from devscast"
+                ]
+            },
+            "files": {
+                "config/packages/doctrine_migrations.yaml": {
+                    "contents": [
+                        "doctrine_migrations:",
+                        "    migrations_paths:",
+                        "        # namespace is arbitrary but should be different from App\\Migrations",
+                        "        # as migrations classes should NOT be autoloaded",
+                        "        'DoctrineMigrations': '%kernel.project_dir%/migrations'",
+                        "    enable_profiler: true",
+                        "    storage:",
+                        "        table_storage:",
+                        "            table_name: '__doctrine_migrations'",
+                        "            version_column_name: 'version'",
+                        "            executed_at_column_name: 'executed_at'",
+                        "            execution_time_column_name: 'execution_time'",
+                        "    all_or_nothing: false",
+                        "    check_database_platform: true",
+                        "    transactional: true",
+                        "",
+                        "when@prod:",
+                        "    doctrine_migrations:",
+                        "        enable_profiler: false",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "migrations/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "e6c4c7ee5edaecfa26a5a015a1845d117882957b"
+        }
+    }
+}

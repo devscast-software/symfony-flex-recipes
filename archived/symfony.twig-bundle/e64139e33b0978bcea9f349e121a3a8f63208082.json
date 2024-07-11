@@ -1,0 +1,210 @@
+{
+    "manifests": {
+        "symfony/twig-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\Bundle\\TwigBundle\\TwigBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "templates/": "templates/"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<5.3"
+                },
+                "post-install-output": [
+                    "  * installed from devscast"
+                ]
+            },
+            "files": {
+                "config/packages/twig.yaml": {
+                    "contents": [
+                        "twig:",
+                        "    form_themes:",
+                        "        - '@DevscastDashlite/layout/form_theme.html.twig'",
+                        "    default_path: '%kernel.project_dir%/templates'",
+                        "    date:",
+                        "        format: 'd M Y'",
+                        "        interval_format: '%d jours restants'",
+                        "        timezone: null",
+                        "    number_format:",
+                        "        decimals: 2",
+                        "        decimal_point: ','",
+                        "        thousands_separator: '.'",
+                        "",
+                        "when@test:",
+                        "    twig:",
+                        "        strict_variables: true",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "templates/admin/domain/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                },
+                "templates/admin/index.html.twig": {
+                    "contents": [
+                        "{% extends '@admin/shared/layout/base.html.twig' %}",
+                        "{% block title 'Administration' %}",
+                        "",
+                        "{% block body %}",
+                        "    <div class=\"alert alert-pro alert-primary\">",
+                        "        <div class=\"alert-text\"><h6>Hello {{ app.user.name }},</h6>",
+                        "            <p>Your order has been successfully placed for diposit. Your will be redirect for make your payment.</p>",
+                        "        </div>",
+                        "    </div>",
+                        "{% endblock %}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "templates/admin/shared/component/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                },
+                "templates/admin/shared/layout/_sidebar.html.twig": {
+                    "contents": [
+                        "{% if is_granted('ROLE_ADMIN') %}",
+                        "    {% set data = [] %}",
+                        "{% endif %}",
+                        "",
+                        "<twig:Dashlite:Sidebar:Sidebar :data=\"data\" />",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "templates/admin/shared/layout/base.html.twig": {
+                    "contents": [
+                        "{% extends '@DevscastDashlite/layout/base.html.twig' %}",
+                        "",
+                        "<twig:block name=\"sidebar\">",
+                        "    {% include 'admin/shared/layout/_sidebar.html.twig' %}",
+                        "</twig:block>",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "templates/admin/shared/layout/form.html.twig": {
+                    "contents": [
+                        "{% extends '@DevscastDashlite/layout/base.html.twig' %}",
+                        "{% set _title = (data is defined and data) ? \"\u00c9dition #{ _entity | trans([], _domain) }\" : \"Cr\u00e9ation #{_entity | trans([], _domain)}\" %}",
+                        "<twig:block name=\"title\">{{ _title }}</twig:block>",
+                        "<twig:block name=\"sidebar\">",
+                        "    {% include 'admin/shared/layout/_sidebar.html.twig' %}",
+                        "</twig:block>",
+                        "",
+                        "<twig:block name=\"header\">",
+                        "    <twig:Dashlite:Layout:Header :title=\"_title\" backTitle=\"Toutes les entr\u00e9es\" backPath=\"{{ _index_url }}\">",
+                        "        <twig:block name=\"content\">",
+                        "            {% if _show_url %}",
+                        "                <twig:Dashlite:Button:HeaderLink name=\"d\u00e9tails\" icon=\"eye\" path=\"{{ _show_url }}\" />",
+                        "            {% endif %}",
+                        "        </twig:block>",
+                        "    </twig:Dashlite:Layout:Header>",
+                        "</twig:block>",
+                        "",
+                        "<twig:block name=\"content\">",
+                        "    <twig:Dashlite:Card:Card>",
+                        "        <twig:Dashlite:Form :form=\"form\" />",
+                        "    </twig:Dashlite:Card:Card>",
+                        "</twig:block>",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "templates/admin/shared/offline.html.twig": {
+                    "contents": [
+                        "",
+                        "<!DOCTYPE html>",
+                        "<html lang=\"{{ app.request.locale }}\" class=\"js\">",
+                        "<head>",
+                        "    <meta charset=\"utf-8\">",
+                        "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">",
+                        "    <link rel=\"shortcut icon\" href=\"{{ asset('images/logo_icon.png') }}\">",
+                        "    <title>Hors Ligne | UNH Rapports</title>",
+                        "    {{ encore_entry_link_tags('app') }}",
+                        "    {{ encore_entry_script_tags('app')}}",
+                        "</head>",
+                        "",
+                        "<body class=\"nk-body bg-white npc-default pg-error\">",
+                        "<div class=\"nk-app-root\">",
+                        "    <div class=\"nk-main \">",
+                        "        <div class=\"nk-wrap nk-wrap-nosidebar\">",
+                        "            <div class=\"nk-content \">",
+                        "                <div class=\"nk-block nk-block-middle wide-xs mx-auto\">",
+                        "                    <div class=\"nk-block-content nk-error-ld text-center\">",
+                        "                        <h1 class=\"nk-error-head\">Oups</h1>",
+                        "                        <h3 class=\"nk-error-title\">Vous \u00eates hors ligne</h3>",
+                        "                        <p class=\"nk-error-text\">D\u00e9sol\u00e9 nous n'arrivons pas \u00e0 charger cette page...</p>",
+                        "                        <a href=\"{{ path('app_index') }}\" class=\"btn btn-lg btn-primary mt-2\">Rentrer sur terre</a>",
+                        "                    </div>",
+                        "                </div>",
+                        "            </div>",
+                        "        </div>",
+                        "    </div>",
+                        "</div>",
+                        "</body>",
+                        "</html>",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "templates/app/domain/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                },
+                "templates/app/shared/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                },
+                "templates/app/shared/component/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                },
+                "templates/app/shared/layout/base.html.twig": {
+                    "contents": [
+                        "<!DOCTYPE html>",
+                        "<html lang=\"{{ app.request.locale() | default('fr') }}\">",
+                        "<head>",
+                        "    <meta charset=\"UTF-8\">",
+                        "    <title>{% block title %}Welcome!{% endblock %}</title>",
+                        "    <link rel=\"icon\" href=\"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>\u26ab\ufe0f</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>\">",
+                        "    {% block stylesheets %}",
+                        "    {% endblock %}",
+                        "",
+                        "    {% block javascripts %}",
+                        "    {% endblock %}",
+                        "</head>",
+                        "<body>",
+                        "{% block body %}{% endblock %}",
+                        "</body>",
+                        "</html>",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "templates/bundles/TwigBundle/Exception/error.html.twig": {
+                    "contents": [
+                        "{% extends '@DevscastDashlite/layout/error.html.twig' %}",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "e64139e33b0978bcea9f349e121a3a8f63208082"
+        }
+    }
+}

@@ -23,16 +23,20 @@
                         "        # namespace is arbitrary but should be different from App\\Migrations",
                         "        # as migrations classes should NOT be autoloaded",
                         "        'DoctrineMigrations': '%kernel.project_dir%/migrations'",
-                        "    enable_profiler: false",
+                        "    enable_profiler: true",
                         "    storage:",
                         "        table_storage:",
-                        "            table_name: '__migrations'",
+                        "            table_name: '__doctrine_migrations'",
                         "            version_column_name: 'version'",
                         "            executed_at_column_name: 'executed_at'",
                         "            execution_time_column_name: 'execution_time'",
                         "    all_or_nothing: false",
                         "    check_database_platform: true",
                         "    transactional: true",
+                        "",
+                        "when@prod:",
+                        "    doctrine_migrations:",
+                        "        enable_profiler: false",
                         ""
                     ],
                     "executable": false
@@ -44,7 +48,7 @@
                     "executable": false
                 }
             },
-            "ref": "b067833e12e66ed3facc41e801207a9f63121ce9"
+            "ref": "e6c4c7ee5edaecfa26a5a015a1845d117882957b"
         }
     }
 }

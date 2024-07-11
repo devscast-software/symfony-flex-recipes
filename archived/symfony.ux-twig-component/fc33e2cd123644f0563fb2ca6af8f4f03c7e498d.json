@@ -1,0 +1,42 @@
+{
+    "manifests": {
+        "symfony/ux-twig-component": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\UX\\TwigComponent\\TwigComponentBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "src/"
+                },
+                "post-install-output": [
+                    "  * installed from devscast"
+                ]
+            },
+            "files": {
+                "config/packages/twig_component.yaml": {
+                    "contents": [
+                        "twig_component:",
+                        "    anonymous_template_directory: 'app/shared/component/'",
+                        "    defaults:",
+                        "        Devscast\\Bundle\\DashliteBundle\\Component\\:",
+                        "            template_directory: '@DevscastDashlite/component/'",
+                        "            name_prefix: 'Dashlite'",
+                        "",
+                        "        Infrastructure\\Shared\\Twig\\Component\\: 'admin/shared/component/'"
+                    ],
+                    "executable": false
+                },
+                "src/Infrastructure/Shared/Symfony/Twig/Component/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "fc33e2cd123644f0563fb2ca6af8f4f03c7e498d"
+        }
+    }
+}

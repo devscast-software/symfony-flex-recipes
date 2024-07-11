@@ -23,8 +23,8 @@
         "twig-bundle": "symfony/twig-bundle",
         "twigbundle": "symfony/twig-bundle",
         "ux": "symfony/webpack-encore-bundle",
-        "validation": "symfony/validator",
-        "validator": "symfony/validator",
+        "ux-twig-component": "symfony/ux-twig-component",
+        "uxtwigcomponent": "symfony/ux-twig-component",
         "webpack": "symfony/webpack-encore-bundle",
         "webpack-encore": "symfony/webpack-encore-bundle",
         "webpack-encore-bundle": "symfony/webpack-encore-bundle",
@@ -32,11 +32,8 @@
         "webpackencorebundle": "symfony/webpack-encore-bundle"
     },
     "recipes": {
-        "devscast/ddd-bundle": [
-            "1.0"
-        ],
         "doctrine/doctrine-bundle": [
-            "2.4"
+            "2.9"
         ],
         "doctrine/doctrine-fixtures-bundle": [
             "3.0"
@@ -45,7 +42,7 @@
             "3.1"
         ],
         "phpunit/phpunit": [
-            "9.3"
+            "9.6"
         ],
         "scheb/2fa-bundle": [
             "6.0"
@@ -54,50 +51,55 @@
             "5.3"
         ],
         "symfony/framework-bundle": [
-            "6.2"
+            "7.0",
+            "7.2"
         ],
         "symfony/phpunit-bridge": [
-            "5.3"
+            "6.3"
         ],
         "symfony/routing": [
-            "6.2"
+            "7.0"
         ],
         "symfony/translation": [
-            "5.3"
+            "6.3"
         ],
         "symfony/twig-bundle": [
-            "5.4"
+            "6.4"
         ],
-        "symfony/validator": [
-            "5.3"
+        "symfony/ux-twig-component": [
+            "2.13"
         ],
         "symfony/webpack-encore-bundle": [
-            "1.10"
+            "2.0"
         ]
     },
     "recipe-conflicts": {
         "doctrine/doctrine-bundle": {
-            "2.4": {
+            "2.9": {
+                "doctrine/orm": "<2.14",
+                "symfony/dependency-injection": "<6.2",
                 "symfony/framework-bundle": "<5.3"
+            }
+        },
+        "symfony/phpunit-bridge": {
+            "6.3": {
+                "phpunit/phpunit": "<9.6",
+                "symfony/framework-bundle": "<5.4"
             }
         },
         "symfony/routing": {
-            "6.2": {
-                "symfony/framework-bundle": "<6.2"
+            "7.0": {
+                "symfony/framework-bundle": "<7.0"
             }
         },
         "symfony/twig-bundle": {
-            "5.4": {
-                "symfony/framework-bundle": "<5.3"
-            }
-        },
-        "symfony/validator": {
-            "5.3": {
+            "6.4": {
                 "symfony/framework-bundle": "<5.3"
             }
         },
         "symfony/webpack-encore-bundle": {
-            "1.10": {
+            "2.0": {
+                "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0",
                 "symfony/framework-bundle": "<5.4"
             }
         }
@@ -106,11 +108,11 @@
     "branch": "main",
     "is_contrib": true,
     "_links": {
-        "repository": "github.com/devscast/symfony-repices",
-        "origin_template": "{package}:{version}@github.com/devscast/symfony-repices:main",
-        "recipe_template": "https://raw.githubusercontent.com/devscast/symfony-repices/flex/main/{package_dotted}.{version}.json",
+        "repository": "github.com/devscast/symfony-flex-recipes",
+        "origin_template": "{package}:{version}@github.com/devscast/symfony-flex-recipes:main",
+        "recipe_template": "https://raw.githubusercontent.com/devscast/symfony-flex-recipes/flex/main/{package_dotted}.{version}.json",
         "recipe_template_relative": "{package_dotted}.{version}.json",
-        "archived_recipes_template": "https://raw.githubusercontent.com/devscast/symfony-repices/flex/main/archived/{package_dotted}/{ref}.json",
+        "archived_recipes_template": "https://raw.githubusercontent.com/devscast/symfony-flex-recipes/flex/main/archived/{package_dotted}/{ref}.json",
         "archived_recipes_template_relative": "archived/{package_dotted}/{ref}.json"
     }
 }
