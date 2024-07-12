@@ -14,6 +14,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [symfony/framework-bundle](https://packagist.org/packages/symfony/framework-bundle) | [7.2](symfony/framework-bundle/7.2) | `framework-bundle`, `frameworkbundle` |
 | [symfony/phpunit-bridge](https://packagist.org/packages/symfony/phpunit-bridge) | [6.3](symfony/phpunit-bridge/6.3) | `phpunit-bridge`, `phpunitbridge`, `simple-phpunit`, `simplephpunit` |
 | [symfony/routing](https://packagist.org/packages/symfony/routing) | [7.0](symfony/routing/7.0) | `router`, `routing` |
+| [symfony/stimulus-bundle](https://packagist.org/packages/symfony/stimulus-bundle) | [2.9](symfony/stimulus-bundle/2.9) | `stimulus`, `stimulus-bundle`, `stimulusbundle` |
 | [symfony/translation](https://packagist.org/packages/symfony/translation) | [6.3](symfony/translation/6.3) | `translation`, `translations`, `translator` |
 | [symfony/twig-bundle](https://packagist.org/packages/symfony/twig-bundle) | [6.4](symfony/twig-bundle/6.4) | `twig-bundle`, `twigbundle` |
 | [symfony/ux-twig-component](https://packagist.org/packages/symfony/ux-twig-component) | [2.13](symfony/ux-twig-component/2.13) | `ux-twig-component`, `uxtwigcomponent` |

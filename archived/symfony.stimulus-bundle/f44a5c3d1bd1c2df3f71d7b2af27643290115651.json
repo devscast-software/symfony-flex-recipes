@@ -1,0 +1,19 @@
+{
+    "manifests": {
+        "symfony/stimulus-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\UX\\StimulusBundle\\StimulusBundle": [
+                        "all"
+                    ]
+                },
+                "conflict": {
+                    "symfony/webpack-encore-bundle": "<2.0",
+                    "symfony/flex": "<1.20.0 || >=2.0.0,<2.3.0"
+                }
+            },
+            "files": [],
+            "ref": "f44a5c3d1bd1c2df3f71d7b2af27643290115651"
+        }
+    }
+}
