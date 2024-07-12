@@ -15,7 +15,7 @@
         "_gitattributes": ".gitattributes",
         "_Makefile": "Makefile",
         "_README.md": "README.md",
-        "compose.yaml": "docker-compose.yaml",
+        "compose.yaml": "compose.yaml",
         "CONTRIBUTING.md": "CONTRIBUTING.md",
         "ecs.php": "ecs.php",
         "LICENSE.md": "LICENSE.md",
