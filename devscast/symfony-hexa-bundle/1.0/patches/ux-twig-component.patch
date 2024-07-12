@@ -1,0 +1,20 @@
+--- a/vendor/symfony/ux-twig-component/src/Twig/TwigPreLexer.php	2024-02-29 18:20:59.000000000 +0200
++++ b/vendor/symfony/ux-twig-component/src/Twig/TwigPreLexer.php	2024-05-09 13:37:06.643585125 +0200
+@@ -70,6 +70,17 @@
+                 }
+             }
+
++            if ($this->consume('{{ "')) {
++                $output .= '{{ "';
++                $output .= $this->consumeUntil('" }}');
++                $this->consume('" }}');
++                $output .= '" }}';
++
++                if ($this->position === $this->length) {
++                    break;
++                }
++            }
++
+             if ($this->consume('{% embed')) {
+                 $inTwigEmbed = true;
+                 $output .= '{% embed';

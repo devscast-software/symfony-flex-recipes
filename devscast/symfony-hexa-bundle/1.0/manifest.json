@@ -1,0 +1,32 @@
+{
+    "bundles": {
+        "Devscast\\HexaBundle\\DevscastHexaBundle": [
+            "all"
+        ]
+    },
+    "copy-from-recipe": {
+        "_github/": ".github/",
+        "config/": "config/",
+        "docker/": "docker/",
+        "patches/": "patches/",
+        "public/": "public/",
+        "src/": "src/",
+        "_editorconfig": ".editorconfig",
+        "_gitattributes": ".gitattributes",
+        "_Makefile": "Makefile",
+        "_README.md": "README.md",
+        "compose.yaml": "docker-compose.yaml",
+        "CONTRIBUTING.md": "CONTRIBUTING.md",
+        "ecs.php": "ecs.php",
+        "LICENSE.md": "LICENSE.md",
+        "nginx.conf": "nginx.conf",
+        "phpcs.xml.dist": "phpcs.xml.dist",
+        "phpstan.neon": "phpstan.neon"
+    },
+    "gitignore": [
+        "/.idea/",
+        "/.vscode/",
+        "/public/uploads/",
+        "/uploads"
+    ]
+}
