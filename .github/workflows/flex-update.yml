@@ -5,12 +5,15 @@ on:
         branches:
             - main
 
+permissions:
+    contents: read
+
 defaults:
     run:
         shell: bash
 
 jobs:
     call-flex-update:
-        uses: devscast-software/symfony-flex-recipes/.github/workflows/callable-flex-update.yml@main
+        uses: symfony/recipes/.github/workflows/callable-flex-update.yml@main
         with:
             contrib: true
