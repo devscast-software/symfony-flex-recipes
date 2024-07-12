@@ -32,6 +32,9 @@
         "webpackencorebundle": "symfony/webpack-encore-bundle"
     },
     "recipes": {
+        "devscast/symfony-hexa-bundle": [
+            "1.0"
+        ],
         "doctrine/doctrine-bundle": [
             "2.9"
         ],
@@ -108,11 +111,11 @@
     "branch": "main",
     "is_contrib": true,
     "_links": {
-        "repository": "github.com/devscast/symfony-flex-recipes",
-        "origin_template": "{package}:{version}@github.com/devscast/symfony-flex-recipes:main",
-        "recipe_template": "https://raw.githubusercontent.com/devscast/symfony-flex-recipes/flex/main/{package_dotted}.{version}.json",
+        "repository": "github.com/devscast-software/symfony-flex-recipes",
+        "origin_template": "{package}:{version}@github.com/devscast-software/symfony-flex-recipes:main",
+        "recipe_template": "https://raw.githubusercontent.com/devscast-software/symfony-flex-recipes/flex/main/{package_dotted}.{version}.json",
         "recipe_template_relative": "{package_dotted}.{version}.json",
-        "archived_recipes_template": "https://raw.githubusercontent.com/devscast/symfony-flex-recipes/flex/main/archived/{package_dotted}/{ref}.json",
+        "archived_recipes_template": "https://raw.githubusercontent.com/devscast-software/symfony-flex-recipes/flex/main/archived/{package_dotted}/{ref}.json",
         "archived_recipes_template_relative": "archived/{package_dotted}/{ref}.json"
     }
 }

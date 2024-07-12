@@ -4,6 +4,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 
 | Package | Latest Recipe | Aliases |
 | --- | --- | --- |
+| [devscast/symfony-hexa-bundle](https://packagist.org/packages/devscast/symfony-hexa-bundle) | [1.0](devscast/symfony-hexa-bundle/1.0) |  |
 | [doctrine/doctrine-bundle](https://packagist.org/packages/doctrine/doctrine-bundle) | [2.9](doctrine/doctrine-bundle/2.9) |  |
 | [doctrine/doctrine-fixtures-bundle](https://packagist.org/packages/doctrine/doctrine-fixtures-bundle) | [3.0](doctrine/doctrine-fixtures-bundle/3.0) | `orm-fixtures`, `ormfixtures` |
 | [doctrine/doctrine-migrations-bundle](https://packagist.org/packages/doctrine/doctrine-migrations-bundle) | [3.1](doctrine/doctrine-migrations-bundle/3.1) | `doctrine-migrations`, `doctrinemigrations`, `migrations` |
