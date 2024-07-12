@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "Devscast\\HexaBundle\\DevscastHexaBundle": [
+        "Devscast\\Bundle\\HexaBundle\\DevscastHexaBundle": [
             "all"
         ]
     },

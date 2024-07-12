@@ -1,0 +1,7 @@
+devscast_hexa:
+    application:
+        domain: devscast.tech
+        sender_email: contact@devscast.tech
+        sender_name: Devscast Contact
+        copyrights: Devscast Software
+        version: 1.0.0
